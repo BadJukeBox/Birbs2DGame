@@ -26,16 +26,20 @@ public class LevelCamera : MonoBehaviour {
             {
                 Instantiate(countdown);
                 exists = true;
-                if(timer >= startCountdown + offset)
-                {
-                    Destroy(countdown);
-                }
             }
         }
         if (timer >= startMovement)
         {
             transform.position += new Vector3(.033f, 0, 0);
+            if (timer >= startCountdown + offset)
+            {
+                countdown.SetActive(false);
+            }
         }
-        Debug.Log(timer);
+    }
+
+    public float getTime()
+    {
+        return timer;
     }
 }
