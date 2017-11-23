@@ -11,6 +11,7 @@ public class LevelCamera : MonoBehaviour {
     float timer = 0;
     float startCountdown = 3.0f;
     float startMovement = 8.0f;
+    float offset = 6f; // remove countdown timer 10s after it appears
 
     // Use this for initialization
     void Start () {
@@ -25,6 +26,10 @@ public class LevelCamera : MonoBehaviour {
             {
                 Instantiate(countdown);
                 exists = true;
+                if(timer >= startCountdown + offset)
+                {
+                    Destroy(countdown);
+                }
             }
         }
         if (timer >= startMovement)

@@ -1,17 +1,17 @@
 fileFormatVersion: 2
-guid: d929a8b49941873469386c87dcd46576
-timeCreated: 1511403599
+guid: 38ea3d7855b943140b29796fb229e8df
+timeCreated: 1511401674
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Bird_Idle_To_Flight clone (1)_0
-    21300002: Bird_Idle_To_Flight clone (1)_1
-    21300004: Bird_Idle_To_Flight clone (1)_2
-    21300006: Bird_Idle_To_Flight clone (1)_3
-    21300008: Bird_Idle_To_Flight clone (1)_4
-    21300010: Bird_Idle_To_Flight clone (1)_5
-    21300012: Bird_Idle_To_Flight clone (1)_6
-    21300014: Bird_Idle_To_Flight clone (1)_7
+    21300000: Bird_Flight (1)_0
+    21300002: Bird_Flight (1)_1
+    21300004: Bird_Flight (1)_2
+    21300006: Bird_Flight (1)_3
+    21300008: Bird_Flight (1)_4
+    21300010: Bird_Flight (1)_5
+    21300012: Bird_Flight (1)_6
+    21300014: Bird_Flight (1)_7
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -86,113 +86,113 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Bird_Idle_To_Flight clone (1)_0
+      name: Bird_Flight (1)_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 680
-        width: 160
-        height: 170
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Bird_Idle_To_Flight clone (1)_1
-      rect:
-        serializedVersion: 2
-        x: 320
-        y: 680
-        width: 160
-        height: 170
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Bird_Idle_To_Flight clone (1)_2
-      rect:
-        serializedVersion: 2
-        x: 640
-        y: 680
-        width: 160
-        height: 170
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Bird_Idle_To_Flight clone (1)_3
-      rect:
-        serializedVersion: 2
-        x: 10
-        y: 400
-        width: 170
-        height: 170
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Bird_Idle_To_Flight clone (1)_4
-      rect:
-        serializedVersion: 2
-        x: 350
-        y: 400
+        x: 20
+        y: 770
         width: 200
-        height: 170
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        height: 190
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Bird_Idle_To_Flight clone (1)_5
+      name: Bird_Flight (1)_1
       rect:
         serializedVersion: 2
-        x: 690
-        y: 410
+        x: 340
+        y: 770
         width: 200
-        height: 170
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        height: 190
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Bird_Idle_To_Flight clone (1)_6
+      name: Bird_Flight (1)_2
       rect:
         serializedVersion: 2
-        x: 90
-        y: 110
+        x: 660
+        y: 770
         width: 200
-        height: 170
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        height: 190
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Bird_Idle_To_Flight clone (1)_7
+      name: Bird_Flight (1)_3
       rect:
         serializedVersion: 2
-        x: 440
+        x: 20
+        y: 450
+        width: 200
+        height: 190
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Bird_Flight (1)_4
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 450
+        width: 200
+        height: 190
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Bird_Flight (1)_5
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 450
+        width: 200
+        height: 190
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Bird_Flight (1)_6
+      rect:
+        serializedVersion: 2
+        x: 20
         y: 130
         width: 200
-        height: 170
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        height: 190
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Bird_Flight (1)_7
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 130
+        width: 200
+        height: 190
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
