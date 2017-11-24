@@ -31,10 +31,6 @@ public class LevelCamera : MonoBehaviour {
         if (timer >= startMovement)
         {
             transform.position += new Vector3(.033f, 0, 0);
-            if (timer >= startCountdown + offset)
-            {
-                countdown.SetActive(false);
-            }
         }
     }
 

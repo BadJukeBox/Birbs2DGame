@@ -9,31 +9,32 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1211448118006614}
+  m_RootGameObject: {fileID: 1632154408769786}
   m_IsPrefabParent: 1
---- !u!1 &1211448118006614
+--- !u!1 &1632154408769786
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4122895605667922}
-  - component: {fileID: 212695590910742460}
-  - component: {fileID: 95812517138459490}
+  - component: {fileID: 4417878921848472}
+  - component: {fileID: 212249570265622290}
+  - component: {fileID: 95182859718657504}
+  - component: {fileID: 114190793479140356}
   m_Layer: 0
-  m_Name: Countdown
+  m_Name: Bird_Level
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4122895605667922
+--- !u!4 &4417878921848472
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1211448118006614}
+  m_GameObject: {fileID: 1632154408769786}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -41,16 +42,16 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &95812517138459490
+--- !u!95 &95182859718657504
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1211448118006614}
+  m_GameObject: {fileID: 1632154408769786}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 948606376aae1a94791e64c95d2c5bef, type: 2}
+  m_Controller: {fileID: 9100000, guid: 7522712c4d644894f8a3027b28d6c516, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -58,12 +59,23 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!212 &212695590910742460
+--- !u!114 &114190793479140356
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1632154408769786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bba8360dd6880374bbd50bd68868fa63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!212 &212249570265622290
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1211448118006614}
+  m_GameObject: {fileID: 1632154408769786}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -92,12 +104,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 34c32f35bf298c74faa70f6959666b76, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d929a8b49941873469386c87dcd46576, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.6, y: 1}
+  m_Size: {x: 1.6, y: 1.7}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1

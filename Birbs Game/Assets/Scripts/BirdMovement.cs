@@ -8,8 +8,12 @@ public class BirdMovement : MonoBehaviour {
     private Animator _anim;
     private float _forwardIncr = .033f;
     private float _moveIncr = .2f;
+    private float _moving = 1f;
+    private float _idle = 0.01f;
+    private float _takeOff = .5f;
     float startMovement = 8.0f;
     float timer = 0f;
+    
 
     void Start () {
         _anim = GetComponent<Animator>();
@@ -20,25 +24,27 @@ public class BirdMovement : MonoBehaviour {
 
         timer += Time.deltaTime;
         if (_anim == null) return;
-        var x = Input.GetAxis("Horizontal");
         var y = Input.GetAxis("Vertical");
 
-        if(timer > startMovement)
+        if (timer > startMovement-1 && timer < startMovement)
         {
-            Move(x, y);
-
+            Move(_takeOff, y);
+        }
+        else if (timer > startMovement)
+        {
+            Move(_moving, y);
+        }
+        else
+        {
+            Move(_idle, 0);
+            Debug.Log("idle");
         }
     }
 
-    private void Move(float x, float y)
+    private void Move(float moveType, float y)
     {
-        _anim.SetFloat("Velx", x);
-        _anim.SetFloat("Vely", y);
-        /*if(x != 0)
-        {
-            transform.position += x > 0 ? new Vector3(_moveIncr, 0, 0) : new Vector3(-_moveIncr, 0, 0);
-        }*/
-        transform.position += new Vector3(_forwardIncr, 0, 0);
+        _anim.SetFloat("Vely", moveType);
+        if(moveType != 0.01f) transform.position += new Vector3(_forwardIncr, 0, 0);
         if (y != 0)
         {
             transform.position += y > 0 ? new Vector3(0, _moveIncr, 0) : new Vector3(0, -_moveIncr, 0);
