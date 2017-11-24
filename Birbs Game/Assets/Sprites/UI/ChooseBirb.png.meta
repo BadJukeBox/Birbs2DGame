@@ -1,0 +1,409 @@
+fileFormatVersion: 2
+guid: d86e9dbd7b7845742b2b17c5415a73a8
+timeCreated: 1511504538
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: ChooseBirb_0
+    21300002: ChooseBirb_12
+    21300004: ChooseBirb_26
+    21300006: ChooseBirb_38
+    21300008: ChooseBirb_52
+    21300010: ChooseBirb_64
+    21300012: ChooseBirb_78
+    21300014: ChooseBirb_90
+    21300016: ChooseBirb_104
+    21300018: ChooseBirb_116
+    21300020: ChooseBirb_130
+    21300022: ChooseBirb_142
+    21300024: ChooseBirb_1
+    21300026: ChooseBirb_2
+    21300028: ChooseBirb_3
+    21300030: ChooseBirb_4
+    21300032: ChooseBirb_5
+    21300034: ChooseBirb_6
+    21300036: ChooseBirb_7
+    21300038: ChooseBirb_8
+    21300040: ChooseBirb_9
+    21300042: ChooseBirb_10
+    21300044: ChooseBirb_11
+    21300046: ChooseBirb_13
+    21300048: ChooseBirb_14
+    21300050: ChooseBirb_15
+    21300052: ChooseBirb_16
+    21300054: ChooseBirb_17
+    21300056: ChooseBirb_18
+    21300058: ChooseBirb_19
+    21300060: ChooseBirb_20
+    21300062: ChooseBirb_21
+    21300064: ChooseBirb_22
+    21300066: ChooseBirb_23
+    21300068: ChooseBirb_24
+    21300070: ChooseBirb_25
+    21300072: ChooseBirb_27
+    21300074: ChooseBirb_28
+    21300076: ChooseBirb_29
+    21300078: ChooseBirb_30
+    21300080: ChooseBirb_31
+    21300082: ChooseBirb_32
+    21300084: ChooseBirb_33
+    21300086: ChooseBirb_34
+    21300088: ChooseBirb_35
+    21300090: ChooseBirb_36
+    21300092: ChooseBirb_37
+    21300094: ChooseBirb_39
+    21300096: ChooseBirb_40
+    21300098: ChooseBirb_41
+    21300100: ChooseBirb_42
+    21300102: ChooseBirb_43
+    21300104: ChooseBirb_44
+    21300106: ChooseBirb_45
+    21300108: ChooseBirb_46
+    21300110: ChooseBirb_47
+    21300112: ChooseBirb_48
+    21300114: ChooseBirb_49
+    21300116: ChooseBirb_50
+    21300118: ChooseBirb_51
+    21300120: ChooseBirb_53
+    21300122: ChooseBirb_54
+    21300124: ChooseBirb_55
+    21300126: ChooseBirb_56
+    21300128: ChooseBirb_57
+    21300130: ChooseBirb_58
+    21300132: ChooseBirb_59
+    21300134: ChooseBirb_60
+    21300136: ChooseBirb_61
+    21300138: ChooseBirb_62
+    21300140: ChooseBirb_63
+    21300142: ChooseBirb_65
+    21300144: ChooseBirb_66
+    21300146: ChooseBirb_67
+    21300148: ChooseBirb_68
+    21300150: ChooseBirb_69
+    21300152: ChooseBirb_70
+    21300154: ChooseBirb_71
+    21300156: ChooseBirb_72
+    21300158: ChooseBirb_73
+    21300160: ChooseBirb_74
+    21300162: ChooseBirb_75
+    21300164: ChooseBirb_76
+    21300166: ChooseBirb_77
+    21300168: ChooseBirb_79
+    21300170: ChooseBirb_80
+    21300172: ChooseBirb_81
+    21300174: ChooseBirb_82
+    21300176: ChooseBirb_83
+    21300178: ChooseBirb_84
+    21300180: ChooseBirb_85
+    21300182: ChooseBirb_86
+    21300184: ChooseBirb_87
+    21300186: ChooseBirb_88
+    21300188: ChooseBirb_89
+    21300190: ChooseBirb_91
+    21300192: ChooseBirb_92
+    21300194: ChooseBirb_93
+    21300196: ChooseBirb_94
+    21300198: ChooseBirb_95
+    21300200: ChooseBirb_96
+    21300202: ChooseBirb_97
+    21300204: ChooseBirb_98
+    21300206: ChooseBirb_99
+    21300208: ChooseBirb_100
+    21300210: ChooseBirb_101
+    21300212: ChooseBirb_102
+    21300214: ChooseBirb_103
+    21300216: ChooseBirb_105
+    21300218: ChooseBirb_106
+    21300220: ChooseBirb_107
+    21300222: ChooseBirb_108
+    21300224: ChooseBirb_109
+    21300226: ChooseBirb_110
+    21300228: ChooseBirb_111
+    21300230: ChooseBirb_112
+    21300232: ChooseBirb_113
+    21300234: ChooseBirb_114
+    21300236: ChooseBirb_115
+    21300238: ChooseBirb_117
+    21300240: ChooseBirb_118
+    21300242: ChooseBirb_119
+    21300244: ChooseBirb_120
+    21300246: ChooseBirb_121
+    21300248: ChooseBirb_122
+    21300250: ChooseBirb_123
+    21300252: ChooseBirb_124
+    21300254: ChooseBirb_125
+    21300256: ChooseBirb_126
+    21300258: ChooseBirb_127
+    21300260: ChooseBirb_128
+    21300262: ChooseBirb_129
+    21300264: ChooseBirb_131
+    21300266: ChooseBirb_132
+    21300268: ChooseBirb_133
+    21300270: ChooseBirb_134
+    21300272: ChooseBirb_135
+    21300274: ChooseBirb_136
+    21300276: ChooseBirb_137
+    21300278: ChooseBirb_138
+    21300280: ChooseBirb_139
+    21300282: ChooseBirb_140
+    21300284: ChooseBirb_141
+    21300286: ChooseBirb_143
+    21300288: ChooseBirb_144
+    21300290: ChooseBirb_145
+    21300292: ChooseBirb_146
+    21300294: ChooseBirb_147
+    21300296: ChooseBirb_148
+    21300298: ChooseBirb_149
+    21300300: ChooseBirb_150
+    21300302: ChooseBirb_151
+    21300304: ChooseBirb_152
+    21300306: ChooseBirb_153
+    21300308: ChooseBirb_154
+    21300310: ChooseBirb_155
+  externalObjects: {}
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ChooseBirb_0
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 2743
+        width: 708
+        height: 79
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ChooseBirb_12
+      rect:
+        serializedVersion: 2
+        x: 1063
+        y: 2743
+        width: 709
+        height: 79
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 1, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ChooseBirb_26
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 2263
+        width: 708
+        height: 79
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ChooseBirb_38
+      rect:
+        serializedVersion: 2
+        x: 1063
+        y: 2263
+        width: 709
+        height: 79
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ChooseBirb_52
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 1784
+        width: 708
+        height: 77
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ChooseBirb_64
+      rect:
+        serializedVersion: 2
+        x: 1063
+        y: 1784
+        width: 709
+        height: 77
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ChooseBirb_78
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 1303
+        width: 708
+        height: 79
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ChooseBirb_90
+      rect:
+        serializedVersion: 2
+        x: 1063
+        y: 1303
+        width: 709
+        height: 79
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ChooseBirb_104
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 823
+        width: 708
+        height: 79
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ChooseBirb_116
+      rect:
+        serializedVersion: 2
+        x: 1063
+        y: 823
+        width: 709
+        height: 79
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ChooseBirb_130
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 344
+        width: 708
+        height: 77
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ChooseBirb_142
+      rect:
+        serializedVersion: 2
+        x: 1063
+        y: 344
+        width: 709
+        height: 77
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 1, y: 0, z: 1, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    outline: []
+    physicsShape: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
