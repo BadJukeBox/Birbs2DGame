@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LevelCamera : MonoBehaviour {
+public class LevelManager : MonoBehaviour {
 
+    GameManager manager = GameManager.getGameManager();
     public GameObject countdown;
+    public Camera cam;
 
     bool exists = false;
     bool paused = false;
@@ -16,6 +18,7 @@ public class LevelCamera : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
+        Instantiate(Resources.Load(manager.getCurrentBird()));
     }
 
     // Update is called once per frame
@@ -29,12 +32,14 @@ public class LevelCamera : MonoBehaviour {
                 Debug.Log("paused");
                 paused = true;
                 Time.timeScale = 0;
+                BirdMovement.pauseMovement(true);
             }
             else
             {
                 Debug.Log("unpaused");
                 paused = false;
                 Time.timeScale = 1.0f;
+                BirdMovement.pauseMovement(false);
             }
         }
 
@@ -48,7 +53,7 @@ public class LevelCamera : MonoBehaviour {
         }
         if (timer >= startMovement && !paused)
         {
-            transform.position += new Vector3(.033f, 0, 0);
+            cam.transform.position += new Vector3(.033f, 0, 0);
         }
     }
 }

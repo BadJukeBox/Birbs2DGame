@@ -5,6 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class TitleManager : MonoBehaviour {
 
+    GameManager manager;
+
+    private void Start()
+    {
+        manager = GameManager.getGameManager(); 
+        if (manager.getCurrentBird() == null) manager.setCurrentBird("BlueJay");
+    }
+
     public void exitGame()
     {
         Application.Quit();

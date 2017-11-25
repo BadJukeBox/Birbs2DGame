@@ -2,16 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameManager : MonoBehaviour {
+public class GameManager{
 
     private static GameManager manager;
+    string currentBird;
 
     private GameManager()
     {
-        currentBird = (GameObject)Resources.Load("BlueJay");
+        setCurrentBird("BlueJay");
     }
-
-    GameObject currentBird;
 
     public static GameManager getGameManager()
     {
@@ -23,8 +22,13 @@ public class GameManager : MonoBehaviour {
 
     }
 
-    public void setCurrentBird()
+    public void setCurrentBird(string bird)
     {
+        currentBird = bird;
+    }
 
+    public string getCurrentBird()
+    {
+        return currentBird;
     }
 }

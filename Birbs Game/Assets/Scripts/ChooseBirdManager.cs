@@ -5,29 +5,21 @@ using UnityEngine.SceneManagement;
 
 public class ChooseBirdManager : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    GameManager manager = GameManager.getGameManager();
 
     public void chooseBlueJay()
     {
-
+        manager.setCurrentBird("BlueJay");
     }
 
     public void chooseBigBlue()
     {
-
+        manager.setCurrentBird("BigBlue");
     }
 
     public void chooseLittle()
     {
-
+        manager.setCurrentBird("Little");
     }
 
     public void acceptAndExit()

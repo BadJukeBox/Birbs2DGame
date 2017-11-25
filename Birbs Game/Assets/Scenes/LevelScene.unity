@@ -423,9 +423,7 @@ GameObject:
   - component: {fileID: 834850834}
   - component: {fileID: 834850833}
   - component: {fileID: 834850832}
-  - component: {fileID: 834850836}
   - component: {fileID: 834850837}
-  - component: {fileID: 834850838}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -495,18 +493,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &834850836
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 834850831}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ca4534ee17001946b1a45e918ef6457, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  countdown: {fileID: 1211448118006614, guid: 58842572d95485e42a3ac2dddf617bf0, type: 2}
 --- !u!61 &834850837
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -532,17 +518,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 19, y: 10}
   m_EdgeRadius: 0
---- !u!114 &834850838
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 834850831}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 23350f750a6ca3946897a19e5accf101, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &994387969
 Prefab:
   m_ObjectHideFlags: 0
@@ -796,6 +771,47 @@ Transform:
   - {fileID: 129036692}
   m_Father: {fileID: 153927969}
   m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1710206537
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1710206539}
+  - component: {fileID: 1710206538}
+  m_Layer: 0
+  m_Name: LevelManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1710206538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1710206537}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ca4534ee17001946b1a45e918ef6457, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  countdown: {fileID: 1211448118006614, guid: 58842572d95485e42a3ac2dddf617bf0, type: 2}
+--- !u!4 &1710206539
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1710206537}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -6.0470757, y: 0.3719521, z: -9.940851}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1757603564
 Prefab:
