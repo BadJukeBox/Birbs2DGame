@@ -7,6 +7,7 @@ public class LevelCamera : MonoBehaviour {
     public GameObject countdown;
 
     bool exists = false;
+    bool paused = false;
 
     float timer = 0;
     float startCountdown = 3.0f;
@@ -19,8 +20,25 @@ public class LevelCamera : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-        timer += Time.deltaTime;
-        if(timer >= startCountdown)
+        if(!paused) timer += Time.deltaTime;
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (!paused)
+            {
+                Debug.Log("paused");
+                paused = true;
+                Time.timeScale = 0;
+            }
+            else
+            {
+                Debug.Log("unpaused");
+                paused = false;
+                Time.timeScale = 1.0f;
+            }
+        }
+
+        if(timer >= startCountdown && !paused)
         {
             if (!exists)
             {
@@ -28,14 +46,9 @@ public class LevelCamera : MonoBehaviour {
                 exists = true;
             }
         }
-        if (timer >= startMovement)
+        if (timer >= startMovement && !paused)
         {
             transform.position += new Vector3(.033f, 0, 0);
         }
-    }
-
-    public float getTime()
-    {
-        return timer;
     }
 }

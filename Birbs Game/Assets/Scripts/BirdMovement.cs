@@ -37,7 +37,6 @@ public class BirdMovement : MonoBehaviour {
         else
         {
             Move(_idle, 0);
-            Debug.Log("idle");
         }
     }
 

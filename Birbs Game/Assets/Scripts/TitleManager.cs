@@ -5,30 +5,23 @@ using UnityEngine.SceneManagement;
 
 public class TitleManager : MonoBehaviour {
 
-
-    void Start () {
-		
-	}
-	
-	void Update () {
-        Debug.Log("why no work");
-	}
-
     public void exitGame()
     {
-        Debug.Log("exiting");
-        //Application.Quit();
+        Application.Quit();
     }
 
     public void playLevel()
     {
-        Debug.Log("going to play scene");
-        //SceneManager.LoadScene("LevelScene");
+        SceneManager.LoadScene("LevelScene");
+    }
+
+    public void chooseBird()
+    {
+        SceneManager.LoadScene("BirdSelect");
     }
 
     public void goToCredits()
     {
-        Debug.Log("going to credits");
-        //SceneManager.LoadScene("LevelScene");
+        SceneManager.LoadScene("Credits");
     }
 }
