@@ -15,13 +15,14 @@ public class LevelManager : MonoBehaviour {
     float timer = 0;
     float startCountdown = 7.0f;
     float startMovement = 12.0f;
-    private float _startx = -5.922f;
-    private float _starty = -1.66f;
     private float _screenMove = .033f;
-    float offset = 6f; // remove countdown timer 10s after it appears
 
     void Start () {
-        Instantiate(Resources.Load(manager.getCurrentBird()), new Vector3(_startx,_starty,0), new Quaternion());
+
+        if(manager.getCurrentBird() == "BlueJay")Instantiate(Resources.Load(manager.getCurrentBird()), new Vector3(-5.922f, -1.66f, 0), new Quaternion());
+        else if (manager.getCurrentBird() == "Little")Instantiate(Resources.Load(manager.getCurrentBird()), new Vector3(-5.819f, -0.905f, 0), new Quaternion());
+        else Instantiate(Resources.Load(manager.getCurrentBird()), new Vector3(-5.927f, -0.765f, 0), new Quaternion());
+
         pauseMenu.gameObject.SetActive(false);
     }
 
@@ -68,6 +69,7 @@ public class LevelManager : MonoBehaviour {
     {
         if (!paused)
         {
+            if (instructions != null) instructions.gameObject.SetActive(false);
             paused = true;
             pauseMenu.gameObject.SetActive(true);
             Time.timeScale = 0;
@@ -75,6 +77,7 @@ public class LevelManager : MonoBehaviour {
         }
         else
         {
+            if (instructions != null) instructions.gameObject.SetActive(true);
             paused = false;
             pauseMenu.gameObject.SetActive(false);
             Time.timeScale = 1.0f;
