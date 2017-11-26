@@ -11,7 +11,7 @@ public class BirdMovement : MonoBehaviour {
     private float _moving = 1f;
     private float _idle = 0.01f;
     private float _takeOff = .5f;
-    float startMovement = 8.0f;
+    float startMovement = 12.0f;
     float timer = 0f;
     
 

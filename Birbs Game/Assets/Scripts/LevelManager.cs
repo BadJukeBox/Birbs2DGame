@@ -7,17 +7,21 @@ public class LevelManager : MonoBehaviour {
     public GameObject countdown;
     public Camera cam;
     public Canvas pauseMenu;
+    public GameObject instructions;
 
     bool exists = false;
     bool paused = false;
 
     float timer = 0;
-    float startCountdown = 3.0f;
-    float startMovement = 8.0f;
+    float startCountdown = 7.0f;
+    float startMovement = 12.0f;
+    private float _startx = -5.922f;
+    private float _starty = -1.66f;
+    private float _screenMove = .033f;
     float offset = 6f; // remove countdown timer 10s after it appears
 
     void Start () {
-        Instantiate(Resources.Load(manager.getCurrentBird()));
+        Instantiate(Resources.Load(manager.getCurrentBird()), new Vector3(_startx,_starty,0), new Quaternion());
         pauseMenu.gameObject.SetActive(false);
     }
 
@@ -33,13 +37,14 @@ public class LevelManager : MonoBehaviour {
         {
             if (!exists)
             {
+                Destroy(instructions);
                 Instantiate(countdown);
                 exists = true;
             }
         }
         if (timer >= startMovement && !paused)
         {
-            cam.transform.position += new Vector3(.033f, 0, 0);
+            cam.transform.position += new Vector3(_screenMove, 0, 0);
         }
     }
 
