@@ -11,6 +11,7 @@ public class LevelManager : MonoBehaviour {
 
     bool exists = false;
     bool paused = false;
+    static bool end = false;
 
     float timer = 0;
     float startCountdown = 7.0f;
@@ -43,7 +44,7 @@ public class LevelManager : MonoBehaviour {
                 exists = true;
             }
         }
-        if (timer >= startMovement && !paused)
+        if (timer >= startMovement && !paused && !end)
         {
             cam.transform.position += new Vector3(_screenMove, 0, 0);
         }
@@ -84,4 +85,10 @@ public class LevelManager : MonoBehaviour {
             BirdMovement.pauseMovement(false);
         }
     }
+
+    public static void stopCamera()
+    {
+        end = true;
+    }
+
 }
