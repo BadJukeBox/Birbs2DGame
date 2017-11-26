@@ -19,7 +19,6 @@ public class BirdMovement : MonoBehaviour {
         _anim = GetComponent<Animator>();
 	}
 	
-	// Update is called once per frame
 	void Update () {
         timer += Time.deltaTime;
         if (_anim == null) return;
@@ -61,7 +60,7 @@ public class BirdMovement : MonoBehaviour {
         {
             Time.timeScale = 1.0f;
             _moveIncr = .2f;
-            _forwardIncr = 0.033f;
+            _forwardIncr = 0.33f;
         }
     }
 }

@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour {
@@ -18,13 +16,11 @@ public class LevelManager : MonoBehaviour {
     float startMovement = 8.0f;
     float offset = 6f; // remove countdown timer 10s after it appears
 
-    // Use this for initialization
     void Start () {
         Instantiate(Resources.Load(manager.getCurrentBird()));
         pauseMenu.gameObject.SetActive(false);
     }
 
-    // Update is called once per frame
     void Update () {
         if(!paused) timer += Time.deltaTime;
 

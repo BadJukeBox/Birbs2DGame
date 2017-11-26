@@ -7,6 +7,14 @@ public class ChooseBirdManager : MonoBehaviour {
 
     GameManager manager = GameManager.getGameManager();
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            acceptAndExit();
+        }
+    }
+
     public void chooseBlueJay()
     {
         manager.setCurrentBird("BlueJay");
