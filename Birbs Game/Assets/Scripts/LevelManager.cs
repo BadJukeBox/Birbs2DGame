@@ -1,12 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour {
 
     GameManager manager = GameManager.getGameManager();
     public GameObject countdown;
     public Camera cam;
+    public Canvas pauseMenu;
 
     bool exists = false;
     bool paused = false;
@@ -19,6 +21,7 @@ public class LevelManager : MonoBehaviour {
     // Use this for initialization
     void Start () {
         Instantiate(Resources.Load(manager.getCurrentBird()));
+        pauseMenu.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -27,20 +30,7 @@ public class LevelManager : MonoBehaviour {
 
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (!paused)
-            {
-                Debug.Log("paused");
-                paused = true;
-                Time.timeScale = 0;
-                BirdMovement.pauseMovement(true);
-            }
-            else
-            {
-                Debug.Log("unpaused");
-                paused = false;
-                Time.timeScale = 1.0f;
-                BirdMovement.pauseMovement(false);
-            }
+            pauseGame();
         }
 
         if(timer >= startCountdown && !paused)
@@ -54,6 +44,40 @@ public class LevelManager : MonoBehaviour {
         if (timer >= startMovement && !paused)
         {
             cam.transform.position += new Vector3(.033f, 0, 0);
+        }
+    }
+
+    public void exitToMainMenu()
+    {
+        pauseGame();
+        SceneManager.LoadScene("TitleScene");
+    }
+
+    public void exitGame()
+    {
+        Application.Quit();
+    }
+
+    public void resume()
+    {
+        pauseGame();
+    }
+
+    private void pauseGame()
+    {
+        if (!paused)
+        {
+            paused = true;
+            pauseMenu.gameObject.SetActive(true);
+            Time.timeScale = 0;
+            BirdMovement.pauseMovement(true);
+        }
+        else
+        {
+            paused = false;
+            pauseMenu.gameObject.SetActive(false);
+            Time.timeScale = 1.0f;
+            BirdMovement.pauseMovement(false);
         }
     }
 }

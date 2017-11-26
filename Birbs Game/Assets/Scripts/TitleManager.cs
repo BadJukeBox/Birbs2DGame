@@ -9,6 +9,7 @@ public class TitleManager : MonoBehaviour {
 
     private void Start()
     {
+        Debug.Log(Time.timeScale);
         manager = GameManager.getGameManager(); 
         if (manager.getCurrentBird() == null) manager.setCurrentBird("BlueJay");
     }
