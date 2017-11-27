@@ -30,6 +30,7 @@ public class AudioManager : MonoBehaviour {
         if (scene.name == "LevelScene")
         {
             Destroy(BackgroundMusic);
+            exists = false;
         }
     }
 
