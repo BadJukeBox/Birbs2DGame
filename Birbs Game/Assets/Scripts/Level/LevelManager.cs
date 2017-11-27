@@ -1,19 +1,22 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class LevelManager : MonoBehaviour {
 
     GameManager manager = GameManager.getGameManager();
     public GameObject countdown;
+    public GameObject instructions;
+    public GameObject result;
     public Camera cam;
     public Canvas pauseMenu;
-    public GameObject instructions;
     public Canvas score;
+    public Canvas endMenu;
     public AudioSource bgMusic;
 
-    bool exists = false;
-    bool paused = false;
-    static bool end = false;
+    bool exists;
+    bool paused;
+    static bool end;
 
     float timer = 0;
     float startCountdown = 7.0f;
@@ -22,10 +25,15 @@ public class LevelManager : MonoBehaviour {
 
     void Start() {
 
+        exists = false;
+        paused = false;
+        end = false;
+
         if (manager.getCurrentBird() == "BlueJay") Instantiate(Resources.Load(manager.getCurrentBird()), new Vector3(-5.922f, -1.66f, 0), new Quaternion());
         else if (manager.getCurrentBird() == "Little") Instantiate(Resources.Load(manager.getCurrentBird()), new Vector3(-5.819f, -0.905f, 0), new Quaternion());
         else Instantiate(Resources.Load(manager.getCurrentBird()), new Vector3(-5.927f, -0.765f, 0), new Quaternion());
 
+        endMenu.gameObject.SetActive(false);
         score.gameObject.SetActive(false);
         pauseMenu.gameObject.SetActive(false);
     }
@@ -33,11 +41,8 @@ public class LevelManager : MonoBehaviour {
     void Update() {
         if (!paused) timer += Time.deltaTime;
 
-        if (end)
-        {
-            goToEndSequence();
-        }
-        else
+        
+        if(!end)
         {
             if (Input.GetKeyDown(KeyCode.Escape))
             {
@@ -59,11 +64,25 @@ public class LevelManager : MonoBehaviour {
                 cam.transform.position += new Vector3(_screenMove, 0, 0);
             }
         }
+        else
+        {
+            Debug.Log(ScoreManager.score);
+            Image resultImg = result.GetComponent<Image>();
+            if (ScoreManager.score < 2000) {
+                Debug.Log("noooo");
+                resultImg.sprite = Resources.Load<Sprite>("TryAgain");
+            }
+            else
+            {
+                resultImg.sprite = Resources.Load<Sprite>("Great");
+            }
+            endMenu.gameObject.SetActive(true);
+        }
     }
 
     public void exitToMainMenu()
     {
-        pauseGame();
+        if(paused)pauseGame();
         SceneManager.LoadScene("TitleScene");
     }
 
@@ -104,9 +123,8 @@ public class LevelManager : MonoBehaviour {
         end = true;
     }
 
-    private void goToEndSequence()
+    public void reload()
     {
-
+        SceneManager.LoadScene("LevelScene");
     }
-
 }

@@ -5,32 +5,48 @@ using UnityEngine.UI;
 
 public class ScoreManager : MonoBehaviour {
 
-    static ScoreManager manager = new ScoreManager();
-
-    public Sprite zero;
-    public Sprite one;
-    public Sprite two;
-    public Sprite three;
-    public Sprite four;
-    public Sprite five;
-    public Sprite six;
-    public Sprite seven;
-    public Sprite eight;
-    public Sprite nine;
+    private Hashtable numToWord = new Hashtable() {
+        { '0',"zero"},
+        { '1',"one"},
+        { '2',"two"},
+        { '3',"three"},
+        { '4',"four"},
+        { '5',"five"},
+        { '6',"six"},
+        { '7',"seven"},
+        { '8',"eight"},
+        { '9',"nine"},
+    };
 
     private static Image[] _scoreDigits;
-    private static int score = 0;
+    public static int score;
+    private string scoreWord;
 
     void Start () {
-        Debug.Log(two);
+        score = 0;
+        scoreWord = "";
         Canvas cav = GetComponent<Canvas>();
         _scoreDigits = cav.GetComponentsInChildren<Image>();
-        updateScore();
 	}
 	
 	public void updateScore () {
         score += 200;
-        _scoreDigits[2].sprite = (Sprite)Resources.Load("two");
-        Debug.Log("score: " + score);
+        updateScoreboard(score);
 	}
+
+    public void decreaseScore()
+    {
+        score = score - 150 < 0 ? 0 : score - 150;
+        updateScoreboard(score);
+    }
+
+    private void updateScoreboard(int score)
+    {
+        scoreWord = score.ToString();
+        if (score < 1000) scoreWord = scoreWord.PadLeft(4, '0');
+        for (int i = 0; i < scoreWord.Length; i++)
+        {
+            _scoreDigits[i].sprite = Resources.Load<Sprite>((string)numToWord[scoreWord[i]]);
+        }
+    }
 }

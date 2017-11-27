@@ -17,13 +17,14 @@ public class BirdMovement : MonoBehaviour {
     float startMovement = 12.0f;
     float timer = 0f;
 
-    public static bool end = false;
+    public static bool end;
     
 
     void Start () {
-    target = GameObject.Find("endPointFlight").transform;
-    endPoint = GameObject.Find("endPoint").transform;
-    _anim = GetComponent<Animator>();
+        end = false;
+        target = GameObject.Find("endPointFlight").transform;
+        endPoint = GameObject.Find("endPoint").transform;
+        _anim = GetComponent<Animator>();
 	}
 	
 	void Update () {
@@ -55,7 +56,7 @@ public class BirdMovement : MonoBehaviour {
     private void Move(float moveType, float y)
     {
         _anim.SetFloat("Vely", moveType);
-        if (moveType > .01f && moveType < 1f) transform.position += new Vector3(1f, 0, 0);
+        if (moveType > .01f && moveType < 1f) transform.position += new Vector3(_forwardIncr, 0, 0);
         else if (moveType == 1f)
         {
             transform.position = Vector3.MoveTowards(transform.position, target.position, .05f);
