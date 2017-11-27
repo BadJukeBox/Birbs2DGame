@@ -4,44 +4,67 @@ using UnityEngine;
 
 public class BirdMovement : MonoBehaviour {
 
-
+    private Transform target;
+    private Transform endPoint;
     private Animator _anim;
     private static float _forwardIncr = .033f;
     private static float _moveIncr = .2f;
-    private float _moving = 1f;
-    private float _idle = 0.01f;
-    private float _takeOff = .5f;
+    private float _idle = 0f;
+    private float _takeOff = .34f;
+    private float _moving = .67f;
+    private float _landing = 1f;
+
     float startMovement = 12.0f;
     float timer = 0f;
+
+    public static bool end = false;
     
 
     void Start () {
-        _anim = GetComponent<Animator>();
+    target = GameObject.Find("endPointFlight").transform;
+    endPoint = GameObject.Find("endPoint").transform;
+    _anim = GetComponent<Animator>();
 	}
 	
 	void Update () {
         timer += Time.deltaTime;
         if (_anim == null) return;
         var y = Input.GetAxis("Vertical");
-
-        if (timer > startMovement-1 && timer < startMovement)
+        
+        if (end)
         {
-            Move(_takeOff, y);
-        }
-        else if (timer > startMovement)
-        {
-            Move(_moving, y);
+            Move(_landing, 0);
         }
         else
         {
-            Move(_idle, 0);
-        }
+            if (timer > startMovement - 1 && timer < startMovement)
+            {
+                Move(_takeOff, y);
+            }
+            else if (timer > startMovement)
+            {
+                Move(_moving, y);
+            }
+            else
+            {
+                Move(_idle, 0);
+            }
+        } 
     }
 
     private void Move(float moveType, float y)
     {
         _anim.SetFloat("Vely", moveType);
-        if(moveType > .01f) transform.position += new Vector3(_forwardIncr, 0, 0);
+        if (moveType > .01f && moveType < 1f) transform.position += new Vector3(1f, 0, 0);
+        else if (moveType == 1f)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, target.position, .05f);
+            if (transform.position == target.position)
+            {
+                transform.position = target.position = endPoint.position;
+                Move(_idle, 0);
+            }   
+        }
         if (y != 0)
         {
             transform.position += y > 0 ? new Vector3(0, _moveIncr, 0) : new Vector3(0, -_moveIncr, 0);
@@ -62,5 +85,10 @@ public class BirdMovement : MonoBehaviour {
             _moveIncr = .2f;
             _forwardIncr = 0.33f;
         }
+    }
+
+    public static void goToEnd()
+    {
+        end = true;
     }
 }

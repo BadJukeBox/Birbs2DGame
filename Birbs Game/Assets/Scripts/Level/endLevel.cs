@@ -7,6 +7,7 @@ public class endLevel : MonoBehaviour {
     private void OnTriggerEnter2D(Collider2D collision)
     {
         LevelManager.stopCamera();
+        BirdMovement.goToEnd();
     }
 
 }
