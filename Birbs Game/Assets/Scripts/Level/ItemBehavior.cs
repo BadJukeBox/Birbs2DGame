@@ -4,12 +4,10 @@ using UnityEngine;
 
 public class ItemBehavior : MonoBehaviour {
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Debug.Log("plus 200");
+        Destroy(this.gameObject);
+    }
 
-	void Start () {
-		
-	}
-	
-	void Update () {
-		
-	}
 }

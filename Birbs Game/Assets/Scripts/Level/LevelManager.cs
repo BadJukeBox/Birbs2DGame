@@ -8,6 +8,8 @@ public class LevelManager : MonoBehaviour {
     public Camera cam;
     public Canvas pauseMenu;
     public GameObject instructions;
+    public Canvas score;
+    public AudioSource bgMusic;
 
     bool exists = false;
     bool paused = false;
@@ -24,6 +26,7 @@ public class LevelManager : MonoBehaviour {
         else if (manager.getCurrentBird() == "Little")Instantiate(Resources.Load(manager.getCurrentBird()), new Vector3(-5.819f, -0.905f, 0), new Quaternion());
         else Instantiate(Resources.Load(manager.getCurrentBird()), new Vector3(-5.927f, -0.765f, 0), new Quaternion());
 
+        score.gameObject.SetActive(false);
         pauseMenu.gameObject.SetActive(false);
     }
 
@@ -40,6 +43,7 @@ public class LevelManager : MonoBehaviour {
             if (!exists)
             {
                 Destroy(instructions);
+                score.gameObject.SetActive(true);
                 Instantiate(countdown);
                 exists = true;
             }
@@ -70,6 +74,7 @@ public class LevelManager : MonoBehaviour {
     {
         if (!paused)
         {
+            bgMusic.volume = .15f;
             if (instructions != null) instructions.gameObject.SetActive(false);
             paused = true;
             pauseMenu.gameObject.SetActive(true);
@@ -78,6 +83,7 @@ public class LevelManager : MonoBehaviour {
         }
         else
         {
+            bgMusic.volume = .5f;
             if (instructions != null) instructions.gameObject.SetActive(true);
             paused = false;
             pauseMenu.gameObject.SetActive(false);

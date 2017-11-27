@@ -19,13 +19,7 @@ public class ItemManagement : MonoBehaviour {
 	}
 	
 	void Update () {
-        //_bottom = Camera.main.WorldToViewportPoint(transform.position).x;
-        Vector3 n = cam.WorldToScreenPoint(new Vector3(0,0,0));
-        if (meh)
-        {
-            Instantiate(acorn, n, new Quaternion());
-            meh = false;
-        }
+        
 
 
     }

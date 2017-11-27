@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class endLevel : MonoBehaviour {
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log(gameObject.name + " was triggered by " + other.gameObject.name);
+        LevelManager.stopCamera();
     }
 
 }
