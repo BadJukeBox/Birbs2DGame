@@ -20,37 +20,44 @@ public class LevelManager : MonoBehaviour {
     float startMovement = 12.0f;
     private float _screenMove = .033f;
 
-    void Start () {
+    void Start() {
 
-        if(manager.getCurrentBird() == "BlueJay")Instantiate(Resources.Load(manager.getCurrentBird()), new Vector3(-5.922f, -1.66f, 0), new Quaternion());
-        else if (manager.getCurrentBird() == "Little")Instantiate(Resources.Load(manager.getCurrentBird()), new Vector3(-5.819f, -0.905f, 0), new Quaternion());
+        if (manager.getCurrentBird() == "BlueJay") Instantiate(Resources.Load(manager.getCurrentBird()), new Vector3(-5.922f, -1.66f, 0), new Quaternion());
+        else if (manager.getCurrentBird() == "Little") Instantiate(Resources.Load(manager.getCurrentBird()), new Vector3(-5.819f, -0.905f, 0), new Quaternion());
         else Instantiate(Resources.Load(manager.getCurrentBird()), new Vector3(-5.927f, -0.765f, 0), new Quaternion());
 
         score.gameObject.SetActive(false);
         pauseMenu.gameObject.SetActive(false);
     }
 
-    void Update () {
-        if(!paused) timer += Time.deltaTime;
+    void Update() {
+        if (!paused) timer += Time.deltaTime;
 
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (end)
         {
-            pauseGame();
+            goToEndSequence();
         }
-
-        if(timer >= startCountdown && !paused)
+        else
         {
-            if (!exists)
+            if (Input.GetKeyDown(KeyCode.Escape))
             {
-                Destroy(instructions);
-                score.gameObject.SetActive(true);
-                Instantiate(countdown);
-                exists = true;
+                pauseGame();
             }
-        }
-        if (timer >= startMovement && !paused && !end)
-        {
-            cam.transform.position += new Vector3(_screenMove, 0, 0);
+
+            if (timer >= startCountdown && !paused)
+            {
+                if (!exists)
+                {
+                    Destroy(instructions);
+                    score.gameObject.SetActive(true);
+                    Instantiate(countdown);
+                    exists = true;
+                }
+            }
+            if (timer >= startMovement && !paused)
+            {
+                cam.transform.position += new Vector3(_screenMove, 0, 0);
+            }
         }
     }
 
@@ -95,6 +102,11 @@ public class LevelManager : MonoBehaviour {
     public static void stopCamera()
     {
         end = true;
+    }
+
+    private void goToEndSequence()
+    {
+
     }
 
 }
